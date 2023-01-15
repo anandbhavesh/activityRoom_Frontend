@@ -25,7 +25,11 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/ngx-toastr/toastr.css"
+            
+              
             ],
             "scripts": []
           },
@@ -64,6 +68,7 @@
             },
             "development": {
               "browserTarget": "Thread:build:development"
+              
             }
           },
           "defaultConfiguration": "development"
@@ -88,8 +93,12 @@
             ],
             "styles": [
               "src/styles.css"
+            
             ],
-            "scripts": []
+            "scripts": [
+             
+
+            ]
           }
         }
       }

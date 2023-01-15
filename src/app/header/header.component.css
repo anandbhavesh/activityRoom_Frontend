@@ -1,0 +1,49 @@
+.flexbox-container{
+
+    display: flex;
+    align-items: flex-start;
+    background-color:LightSeaGreen;
+    align-items: flex-start;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    top: 0;
+   
+    }
+    
+    .home{
+    width: 45px;
+    padding-top: 2%;
+    margin-left: 1%;
+    padding-bottom:1%;
+    
+    
+    }
+    
+    .postbutton{
+    padding-top: 2%;
+    margin-left: 1%;
+    
+    }
+    
+    .flex-item-2{
+    width: 100%;
+    padding-top: 2%;
+    padding-left: 8%;
+    padding-bottom:1%;
+    align-items: flex-start;
+    
+    }
+    
+    .login-signup{
+        padding-top: 2%;
+        margin-left: 3%;
+        display: flex;
+        padding-right: 2%;
+        
+    }
+
+    .profile{
+    color: white;
+    
+    }

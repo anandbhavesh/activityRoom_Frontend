@@ -1,0 +1,8 @@
+.home{
+    background: url('pexels-tom-swinnen-695342.jpg');
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+    height: 100%;
+}

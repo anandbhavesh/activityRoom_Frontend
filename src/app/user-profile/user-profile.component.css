@@ -1,0 +1,63 @@
+.posttile{
+    margin-top: 13%;
+
+}
+
+.title{
+
+    color: #878A8C;
+    width: 80%;
+    margin-left: 40%;
+    margin-bottom: 2%;
+
+}
+
+.post{
+    --post-line-color: #ccc;    
+    border: 1px solid #ccc;
+    margin-bottom: 1%;
+    overflow: hidden;
+    background-color: rgba(255,255,255,0.8);
+    color: #878A8C;
+    position: relative;
+    border-radius: 10px;
+    padding:1%;
+    width: 80%;
+    margin-left: 10%;
+    
+   
+}
+
+.btnCommments{
+    border-radius: 2px solid;
+    color: #878A8C;
+    opacity: 1;
+}
+
+.btnCommments:hover{
+    opacity: 0.65;
+    cursor: pointer;
+}
+
+.post-title{
+    font-size: 28px;
+    font-weight: bold;
+    opacity: 1;
+}
+
+.posturl, .postname{    
+    color: black;
+}
+
+.PBM-text{
+    font-weight: bold;
+}
+
+.post-text{
+   margin-top: 3%;
+}
+
+.largerCheckbox{
+    width: 20px;
+    height: 20px;
+}

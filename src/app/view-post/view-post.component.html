@@ -1,0 +1,84 @@
+<div class="maindiv">
+  
+    
+   
+  <div class="post">
+    
+      <span>
+        <span class="PBM-text" style="padding-right: 15px;"><a style="text-decoration:none" class="post-url"  routerLink="/search/{{post.segment}}/null" >{{post.segment}}</a></span>
+        <span class="PBM-text">{{post.product}}</span>
+        <span> . Created
+          <span> {{post.duration}} </span>
+          by              
+          <span>{{post.userName}}</span>
+        </span>
+      </span>
+      <hr />
+      <a class="post-title" href="{{post.url}}">{{post.postName}}</a>
+      <div>
+        <p class="post-text" [innerHtml]="post.description"></p>
+      </div>
+
+  </div>
+
+      <div class="post-comment">
+
+        <div style="margin: 5%;">
+
+        <form [formGroup]="commentForm" (ngSubmit)="postComment()">
+
+          <div class="form-group">
+            <label for="To" class="form-label">Recepient</label>
+            <input id ="To" type="text"  class="form-control" [formControlName]="'to'"  placeholder="Enter Recepient email"/>
+          </div>
+          <div class="form-group">
+             <label for="text" class="form-label">Comments</label>
+            <textarea id="text" class="form-control" [formControlName]="'text'" placeholder="Text"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="file" class="form-label">Select file here</label>
+            <input id ="file" #inputFile (change)="fileUploaded($event)"  type="file"  class="form-control" />
+          </div>
+          
+
+          <button type="submit" class="login btn btn-primary" style="margin-left: 80%; margin-top: 2%;">Comment</button>
+        </form>
+         
+      </div>
+      </div>
+
+
+
+      <div style="margin-top: 5%; margin-left: 5%; margin-right: 5%;" *ngFor="let comment of comments">
+
+        <div class="comment row">
+
+          <div class="col-md-11">
+            <div class="username">
+              <p>{{comment.userName}}</p>
+          </div>
+          <div>
+            <p>{{comment.duration}}</p>
+          </div>
+          <b>{{comment.text}}</b>
+          
+
+          </div>
+          <div class="col-md-1">
+            <a class="postname"  *ngIf="comment.filename != null"  href="http://localhost:8080/api/comments/download/{{comment.id}}"  style="margin-right: 5%;">   <svg class=""xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+              <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+              <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+             </svg> </a>
+
+          </div>
+
+        </div>
+      </div> 
+
+      
+      <hr style="width: 80%;"/>
+      
+
+
+</div>

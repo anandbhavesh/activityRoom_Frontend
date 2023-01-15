@@ -1,0 +1,62 @@
+.maindiv{
+  margin-top: 10%;
+  width: 80%;
+  margin-left: 10%;
+}
+
+.post-title {
+  font-size: 28px;
+  font-weight: bold;
+  opacity: 1;
+}
+
+.post-title:hover {
+  opacity: 0.6;
+}
+
+.PBM-text {
+  font-weight: bold;
+}
+
+.post-url {
+  color: black;
+}
+
+.username{
+    color: gray;
+}
+
+.post-text{
+    margin-top: 30px;
+}
+
+.post{
+    --post-line-color: #ccc;    
+    border: 1px solid #ccc;
+    overflow: hidden;
+    background-color: rgba(255,255,255,0.8);
+    color: #878A8C;
+    position: relative;
+    border-radius: 10px;
+    padding:3%;
+}
+
+.comment{    
+    --post-line-color: #ccc;    
+    border: 1px solid #ccc;    
+    overflow: hidden;
+    background-color: rgba(255,255,255,0.8);
+    color: #878A8C;
+    position: relative;
+    border-radius: 10px;
+    padding: 2%;
+}
+
+.post-comment{
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-top: 10%;
+  margin-left: 10%;
+  margin-right: 10%;
+
+}

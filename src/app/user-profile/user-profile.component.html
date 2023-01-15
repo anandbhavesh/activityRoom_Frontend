@@ -1,0 +1,57 @@
+
+
+<div *ngIf="Posts.length > 0"  class="posttile">
+
+    <h2 class="title">Your Activities</h2>
+   
+    <div class="row post" *ngFor="let post of Posts">
+   
+     <div class="col-md-1">
+   
+         <input type="checkbox" (change)="getCheckboxId($event,post.id)" class="largerCheckbox">
+   
+     </div>
+   
+    
+     <div class="col-md-11">
+         <span >
+   
+             <span class="PBM-text">{{post.product}}</span>
+             <span class="PBM-text" style="padding-left:1%;">{{post.segment}}</span>
+             <span class="username" > . Created by {{post.userName}}</span>
+             <span> . {{post.duration}}</span>
+         </span>
+         <hr />
+         <div class="post-title">
+             <a class="postname" href="{{post.url}}">{{post.postName}}</a>
+         </div>
+         <div>
+             <p class="post-text" [innerHtml]="post.description"></p>
+         </div>
+         <hr />
+         <span>
+             <a class="btnCommments" role="button">
+                 <fa-icon [icon]="faComments"></fa-icon>
+                 Comments({{post.commentCount}})
+             </a>
+             <button class="login btn btn-primary" (click)="goToPost(post.id)">
+                 Read Post
+             </button>
+         </span>
+     </div>
+   
+     </div>
+   
+     
+   
+    
+   
+   <button class="btn btn-primary" style="margin-left:48%; margin-bottom: 1%;" (click)="PostDelete()">Delete post</button>
+   </div>
+   
+
+   <div *ngIf="Posts.length < 1"  class="posttile" style="background-color: bisque; width: 90%; height: 100px; margin-left: 5%;">
+      <h2 style="text-align: center; padding-top: 25px;">No Activities Created</h2>
+   </div>
+
+
